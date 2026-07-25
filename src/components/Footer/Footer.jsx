@@ -52,5 +52,15 @@ function Footer() {
     </footer>
   );
 }
+<p>
+  Built for{" "}
+  <a
+    href="https://digitalheroesco.com"
+    target="_blank"
+    rel="noreferrer"
+  >
+    Digital Heroes Training Task
+  </a>
+</p>
 
 export default Footer;
