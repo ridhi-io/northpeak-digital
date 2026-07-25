@@ -1,16 +1,67 @@
 # React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+# NorthPeak Digital
 
-Currently, two official plugins are available:
+A modern, responsive landing page built using React and Vite for the Digital Heroes Frontend Development Assignment.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Live Demo
 
-## React Compiler
+https://northpeak-digital-n94x3o9fn-ridhi04.vercel.app/
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 📂 GitHub Repository 
+https://github.com/ridhi-io/northpeak-digital
 
-## Expanding the Oxlint configuration
+## ✨ Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+- Modern responsive UI
+- React component-based architecture
+- Smooth scrolling navigation
+- Interactive FAQ accordion
+- Services section
+- Testimonials section
+- Pricing plans
+- Contact form with frontend validation
+- Mobile-first responsive design
+
+## 🛠 Tech Stack
+
+- React
+- Vite
+- CSS3
+- React Icons
+
+## 📁 Project Structure
+
+```
+src/
+ ├── components/
+ ├── styles/
+ ├── App.jsx
+ └── main.jsx
+```
+
+## ⚙️ Installation
+
+```bash
+git clone <repository-url>
+
+cd northpeak-digital
+
+npm install
+
+npm run dev
+```
+
+## 📦 Build
+
+```bash
+npm run build
+```
+
+## 🌐 Deployment
+
+Deployed using Vercel.
+
+## 👩‍💻 Author
+
+Ridhi Pardeshi
