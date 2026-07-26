@@ -29,7 +29,6 @@ function Testimonials() {
   return (
     <section className="testimonials section" id="testimonials">
       <div className="container">
-
         <div className="section-header">
           <span>TESTIMONIALS</span>
 
@@ -46,10 +45,8 @@ function Testimonials() {
         </div>
 
         <div className="testimonial-grid">
-
           {testimonials.map((item, index) => (
             <div className="testimonial-card" key={index}>
-
               <div className="stars">
                 {[...Array(5)].map((_, i) => (
                   <FaStar key={i} />
@@ -61,26 +58,18 @@ function Testimonials() {
               </p>
 
               <div className="client">
-
                 <div className="avatar">
                   {item.image}
                 </div>
 
-                <div>
-
-                  <h4>{item.name}</h4>
-
-                  <span>{item.role}</span>
-
+                <div className="client-info">
+                  <p className="client-name">{item.name}</p>
+                  <span className="client-role">{item.role}</span>
                 </div>
-
               </div>
-
             </div>
           ))}
-
         </div>
-
       </div>
     </section>
   );
