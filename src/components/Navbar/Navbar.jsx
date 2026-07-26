@@ -14,7 +14,10 @@ function Navbar() {
           NorthPeak
         </a>
 
-        <nav className={menuOpen ? "nav-links active" : "nav-links"}>
+        <nav
+  id="primary-navigation"
+  className={menuOpen ? "nav-links active" : "nav-links"}
+>
           <a href="#services" onClick={() => setMenuOpen(false)}>Services</a>
           <a href="#testimonials" onClick={() => setMenuOpen(false)}>Testimonials</a>
           <a href="#pricing" onClick={() => setMenuOpen(false)}>Pricing</a>
@@ -22,16 +25,26 @@ function Navbar() {
           <a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a>
         </nav>
 
-        <button className="primary-btn nav-btn">
-          Get Started
-        </button>
+        <button
+  className="primary-btn nav-btn"
+  onClick={() => {
+    document.getElementById("contact")?.scrollIntoView({
+      behavior: "smooth",
+    });
+  }}
+>
+  Get Started
+</button>
 
         <button
-          className="menu-btn"
-          onClick={() => setMenuOpen(!menuOpen)}
-        >
-          {menuOpen ? <FaTimes /> : <FaBars />}
-        </button>
+  className="menu-btn"
+  onClick={() => setMenuOpen(!menuOpen)}
+  aria-label={menuOpen ? "Close navigation menu" : "Open navigation menu"}
+  aria-expanded={menuOpen}
+  aria-controls="primary-navigation"
+>
+  {menuOpen ? <FaTimes /> : <FaBars />}
+</button>
 
       </div>
     </header>
