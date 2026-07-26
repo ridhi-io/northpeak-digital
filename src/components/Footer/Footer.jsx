@@ -17,7 +17,8 @@ function Footer() {
 
           <p>
             We build modern digital experiences that help startups and
-            businesses grow online.
+            ambitious businesses grow through beautiful websites and
+            high-converting digital solutions.
           </p>
         </div>
 
@@ -34,7 +35,7 @@ function Footer() {
           <a href="#contact">Contact</a>
         </div>
 
-        {/* Socials */}
+        {/* Social Links */}
 
         <div className="footer-social">
           <h3>Connect</h3>
@@ -44,8 +45,8 @@ function Footer() {
             <a
               href="https://github.com"
               target="_blank"
-              rel="noreferrer"
-              aria-label="GitHub"
+              rel="noopener noreferrer"
+              aria-label="Visit our GitHub profile"
             >
               <FaGithub />
             </a>
@@ -53,8 +54,8 @@ function Footer() {
             <a
               href="https://linkedin.com"
               target="_blank"
-              rel="noreferrer"
-              aria-label="LinkedIn"
+              rel="noopener noreferrer"
+              aria-label="Visit our LinkedIn profile"
             >
               <FaLinkedin />
             </a>
@@ -62,8 +63,8 @@ function Footer() {
             <a
               href="https://instagram.com"
               target="_blank"
-              rel="noreferrer"
-              aria-label="Instagram"
+              rel="noopener noreferrer"
+              aria-label="Visit our Instagram profile"
             >
               <FaInstagram />
             </a>
@@ -74,6 +75,7 @@ function Footer() {
       </div>
 
       <div className="footer-bottom">
+
         <p>
           © {new Date().getFullYear()} NorthPeak Digital. All rights reserved.
         </p>
@@ -83,11 +85,12 @@ function Footer() {
           <a
             href="https://digitalheroesco.com"
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
           >
             Digital Heroes Training Task
           </a>
         </p>
+
       </div>
     </footer>
   );
