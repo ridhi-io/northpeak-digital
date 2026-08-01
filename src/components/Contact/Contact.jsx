@@ -1,5 +1,6 @@
 import "./Contact.css";
 import { useState } from "react";
+import axios from "axios";
 import {
   FaEnvelope,
   FaPhoneAlt,
@@ -23,30 +24,38 @@ function Contact() {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (
-      !form.name ||
-      !form.email ||
-      !form.message
-    ) {
+    if (!form.name || !form.email || !form.message) {
       alert("Please fill in all required fields.");
       return;
     }
 
-    setSubmitted(true);
+    try {
+      await axios.post(
+        "http://localhost:5000/api/contact",
+        form
+      );
 
-    setForm({
-      name: "",
-      email: "",
-      company: "",
-      message: "",
-    });
+      setSubmitted(true);
 
-    setTimeout(() => {
-      setSubmitted(false);
-    }, 4000);
+      setForm({
+        name: "",
+        email: "",
+        company: "",
+        message: "",
+      });
+
+      setTimeout(() => {
+        setSubmitted(false);
+      }, 4000);
+
+    } catch (error) {
+      console.error(error);
+
+      alert("Something went wrong. Please try again.");
+    }
   };
 
   return (
@@ -98,6 +107,7 @@ function Contact() {
             placeholder="Full Name"
             value={form.name}
             onChange={handleChange}
+            required
           />
 
           <input
@@ -106,6 +116,7 @@ function Contact() {
             placeholder="Email Address"
             value={form.email}
             onChange={handleChange}
+            required
           />
 
           <input
@@ -122,6 +133,7 @@ function Contact() {
             placeholder="Tell us about your project..."
             value={form.message}
             onChange={handleChange}
+            required
           />
 
           <button type="submit">
